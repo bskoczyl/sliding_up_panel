@@ -308,7 +308,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
                   border: widget.border,
                   borderRadius: widget.borderRadius,
                   boxShadow: widget.boxShadow,
-                  color: widget.color,
+                  color: Colors.blue,
                 ) : null,
                 child: child,
               );
