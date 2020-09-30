@@ -121,6 +121,10 @@ class SlidingUpPanel extends StatefulWidget {
   /// backdrop closes the panel. Defaults to true.
   final bool backdropTapClosesPanel;
 
+  /// Flag that indicates whether or not tapping the
+  /// backdrop closes the panel. Defaults to true.
+  final bool backdropTapClosesPanel1;
+
   /// If non-null, this callback
   /// is called as the panel slides around with the
   /// current position of the panel. The position is a double
@@ -190,6 +194,7 @@ class SlidingUpPanel extends StatefulWidget {
     this.backdropColor = Colors.black,
     this.backdropOpacity = 0.5,
     this.backdropTapClosesPanel = true,
+    this.backdropTapClosesPanel1,
     this.onPanelSlide,
     this.onPanelOpened,
     this.onPanelClosed,
@@ -335,7 +340,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
                 widget.header != null ? Positioned(
                   top: widget.slideDirection == SlideDirection.UP ? 0.0 : null,
                   bottom: widget.slideDirection == SlideDirection.DOWN ? 0.0 : null,
-                  child: Container(height: 20, color: Colors.blue),
+                  child: widget.header,
                 ) : Container(),
 
                 // footer
