@@ -335,7 +335,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel> with SingleTickerProvid
                 widget.header != null ? Positioned(
                   top: widget.slideDirection == SlideDirection.UP ? 0.0 : null,
                   bottom: widget.slideDirection == SlideDirection.DOWN ? 0.0 : null,
-                  child: widget.header,
+                  child: Container(height: 20, color: Colors.blue),
                 ) : Container(),
 
                 // footer
